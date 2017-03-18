@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, currentFragmet).commit();
+
         } else if (id == R.id.nav_map) {
             // Create a new Fragment to be placed in the activity layout
             currentFragmet = new MapsFragment();
@@ -121,13 +122,34 @@ public class MainActivity extends AppCompatActivity
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, currentFragmet).commit();
+
         } else if (id == R.id.nav_videos) {
+            // Create a new Fragment to be placed in the activity layout
+
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+
 
         } else if (id == R.id.nav_history) {
+            // Create a new Fragment to be placed in the activity layout
+            currentFragmet = new HistoryFragment();
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, currentFragmet).commit();
 
         } else if ( id == R.id.nav_fun_facts){
+            // Create a new Fragment to be placed in the activity layout
+            currentFragmet = new FunFactsFragment();
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, currentFragmet).commit();
 
         } else if (id == R.id.nav_manage) {
+            // Create a new Fragment to be placed in the activity layout
+
+            // Add the fragment to the 'fragment_container' FrameLayout
 
         }
 

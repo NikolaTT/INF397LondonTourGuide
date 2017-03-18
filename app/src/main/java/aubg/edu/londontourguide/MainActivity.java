@@ -121,13 +121,13 @@ public class MainActivity extends AppCompatActivity
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, currentFragmet).commit();
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_videos) {
+
+        } else if (id == R.id.nav_history) {
+
+        } else if ( id == R.id.nav_fun_facts){
 
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 

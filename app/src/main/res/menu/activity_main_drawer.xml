@@ -7,6 +7,10 @@
             android:icon="@drawable/ic_weekend_black_24dp"
             android:title="@string/nav_menu_information_option" />
         <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_web_black_24dp"
+            android:title="News" />
+        <item
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_near_me_black_24dp"
             android:title="@string/nav_menu_map_option" />
@@ -23,7 +27,7 @@
             android:icon="@drawable/ic_tag_faces_black_24dp"
             android:title="Fun Facts" />
 
-        />
+
         </group>
     <group>
         <item

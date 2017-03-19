@@ -127,13 +127,8 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_map) {
             // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new MapsFragment();
             Intent intent = new Intent(this, GoogleMapsActivity.class);
             startActivity(intent);
-
-            // Add the fragment to the 'fragment_container' FrameLayout
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.fragment_container, currentFragmet).commit();
 
         } else if (id == R.id.nav_videos) {
             // Create a new Fragment to be placed in the activity layout

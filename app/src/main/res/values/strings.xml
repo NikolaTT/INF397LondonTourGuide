@@ -45,4 +45,5 @@
     </string>
     <string name="source2"></string>
     <string name="source3"></string>
+    <string name="title_activity_google_maps">Map</string>
 </resources>

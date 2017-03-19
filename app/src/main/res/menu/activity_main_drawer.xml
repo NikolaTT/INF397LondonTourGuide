@@ -26,6 +26,10 @@
             android:id="@+id/nav_fun_facts"
             android:icon="@drawable/ic_tag_faces_black_24dp"
             android:title="Fun Facts" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
 
 
         </group>

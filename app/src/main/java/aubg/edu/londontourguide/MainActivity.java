@@ -1,5 +1,6 @@
 package aubg.edu.londontourguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -127,10 +128,12 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_map) {
             // Create a new Fragment to be placed in the activity layout
             currentFragmet = new MapsFragment();
+            Intent intent = new Intent(this, GoogleMapsActivity.class);
+            startActivity(intent);
 
             // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, currentFragmet).commit();
+//            getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.fragment_container, currentFragmet).commit();
 
         } else if (id == R.id.nav_videos) {
             // Create a new Fragment to be placed in the activity layout
@@ -160,7 +163,8 @@ public class MainActivity extends AppCompatActivity
 
             // Add the fragment to the 'fragment_container' FrameLayout
 
-        }
+        } else if (id == R.id.nav_gallery)
+        {}
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

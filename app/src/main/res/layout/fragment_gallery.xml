@@ -2,13 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aubg.edu.londontourguide.MainActivity">
+    tools:context="aubg.edu.londontourguide.GalleryFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/webview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/imagegallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         />
 
 </FrameLayout>

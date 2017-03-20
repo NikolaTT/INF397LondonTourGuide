@@ -1,13 +1,70 @@
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aubg.edu.londontourguide.MapsFragment">
+    tools:context=".MainActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:fadingEdge="horizontal|vertical"
+        android:src="@drawable/amazingfacts" />
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:lineSpacingExtra="3sp"
+        android:paddingBottom="32dp"
+        android:text="@string/fun_facts"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ADD TEXT HERE" />
+        android:layout_height="wrap_content"
+        android:text="Sources:"
+        android:textSize="12sp" />
 
+    <TextView
+        android:id="@+id/source1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:maxLines="1"
+        android:text="https://friendlylocalguides.com/blog/25-fun-facts-about-london"
+        android:textColorLink="@android:color/darker_gray"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:maxLines="1"
+        android:text="https://www.bloomsbury-international.com/blog/2014/10/03/15-interesting-facts-about-london-and-england-that-youve-never-heard/"
+        android:textColorLink="@android:color/darker_gray"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:maxLines="1"
+        android:text="https://www.buzzfeed.com/patricksmith/54-amazing-facts-about-london-that-will-blow-your-mind"
+        android:textColorLink="@android:color/darker_gray"
+        android:textSize="10sp" />
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </FrameLayout>

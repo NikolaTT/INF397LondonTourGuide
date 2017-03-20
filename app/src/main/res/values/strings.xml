@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LondonTourGuide</string>
+    <string name="app_name">London Tour Guide</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
 
@@ -26,4 +26,27 @@
     <string name="top_10_news_today">Top 10 News Today</string>
     <string name="news_source">(news taken from http://reddit.com/r/london)</string>
 
+    <string name="fun_facts">
+1.	It is illegal to die in the Palace of Westminster.  \n
+2.	More languages are spoken in London that in any other city in the world. The total is over 300.  \n
+3.	London has more universities in the world top 40 universities list than any other city. There are four.  \n
+4.	It is considered an act of treason to put a postage stamp with the queen’s head upside down on an envelope!  \n
+5.	Big Ben is not actually the name of the clock, it is the name of the bell which is inside the clock.  \n
+6.	In 1945, a flock of birds landed on the minute hand of Big Ben and put the time back by 5 minutes.  \n
+7.	The world’s first subway was built in London in 1863.  \n
+8.	In 2008, the name Muhammad became the most popular for newborn boys in London.  \n
+9.	London is the first of the world’s major cities in 2010 that imposed restrictions on the movement speed of … pedestrians.  \n
+10.	Unusual street names in London include Ha Ha Road in Greenwich, Hooker’s Road in Walthamstow, Quaggy Walk in Blackheath, and Cyclops Mews in Limehouse.  \n
+11.	There’s a sign on the Chelsea Embankment and Albert Bridge that orders marching troops to break their step as the cross, so the vibrations don’t damage the structure.  \n
+12.	To pass the Knowledge, the insanely difficult London geography test required of black-cab drivers in the city, you must master 320 basic routes, all of their 25,000 streets, and many landmarks.  \n
+13.	Karl Marx drafted the Communist Manifesto in a room above the Red Lion pub on Great Windmill Street. It’s now a trendy B@1 bar.  \n
+14.	In 1647, Christmas was abolished by the English Parliament. No-one was allowed to celebrate.
+    </string>
+
+    <string name="source1">
+        https://friendlylocalguides.com/blog/25-fun-facts-about-london
+    </string>
+    <string name="source2"></string>
+    <string name="source3"></string>
+    <string name="title_activity_google_maps">Map</string>
 </resources>

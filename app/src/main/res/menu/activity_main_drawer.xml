@@ -7,13 +7,13 @@
             android:icon="@drawable/ic_weekend_black_24dp"
             android:title="@string/nav_menu_information_option" />
         <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_web_black_24dp"
+            android:title="News" />
+        <item
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_near_me_black_24dp"
             android:title="@string/nav_menu_map_option" />
-        <item
-            android:id="@+id/nav_videos"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Videos" />
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_local_library_black_24dp"
@@ -22,8 +22,12 @@
             android:id="@+id/nav_fun_facts"
             android:icon="@drawable/ic_tag_faces_black_24dp"
             android:title="Fun Facts" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
 
-        />
+
         </group>
     <group>
         <item

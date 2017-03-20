@@ -1,11 +1,16 @@
 package aubg.edu.londontourguide;
 
 
+<<<<<<< HEAD
 import android.database.Cursor;
+=======
+import android.content.Intent;
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+<<<<<<< HEAD
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -20,6 +25,13 @@ import java.util.ArrayList;
 
 import aubg.edu.londontourguide.adapters.NewsAdapter;
 import aubg.edu.londontourguide.data.NewsContract;
+=======
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
 
 
 /**
@@ -41,10 +53,14 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
 
     private Uri mUri = NewsContract.NewsEntry.CONTENT_URI;
 
+<<<<<<< HEAD
     private RecyclerView mRecyclerView;
     private NewsAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+=======
+Button btnVideo;
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
     public InformationFragment() {
         // Required empty public constructor
     }
@@ -103,7 +119,23 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
     }
 
     @Override
+<<<<<<< HEAD
     public void onLoaderReset(Loader<Cursor> loader) {
         mAdapter.deleteAllData();
+=======
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        btnVideo = (Button)view.findViewById(R.id.btnVideo);
+        btnVideo.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=jiz0uJaFFII")));
+                Log.i("Video", "Video Playing....");
+
+            }
+        });
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
     }
 }

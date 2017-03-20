@@ -1,5 +1,6 @@
 package aubg.edu.londontourguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // SUGGESTION -> MAKE MUSIC PLAY AND PAUSE HERE
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -142,20 +144,43 @@ public class MainActivity extends AppCompatActivity
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, currentFragmet).commit();
-        } else if (id == R.id.nav_map) {
+
+        } else if ( id== R.id.nav_news) {
             // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new MapsFragment();
+            currentFragmet = new NewsFragment();
 
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, currentFragmet).commit();
-        } else if (id == R.id.nav_videos) {
+
+        }
+        else if (id == R.id.nav_map) {
+            // Create a new Fragment to be placed in the activity layout
+            Intent intent = new Intent(this, GoogleMapsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_history) {
+            // Create a new Fragment to be placed in the activity layout
+            currentFragmet = new HistoryFragment();
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, currentFragmet).commit();
 
         } else if ( id == R.id.nav_fun_facts){
+            // Create a new Fragment to be placed in the activity layout
+            currentFragmet = new FunFactsFragment();
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, currentFragmet).commit();
 
         } else if (id == R.id.nav_manage) {
+            // Create a new Fragment to be placed in the activity layout
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+
+        } else if (id == R.id.nav_gallery) {
 
         }
 

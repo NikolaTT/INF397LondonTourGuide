@@ -24,6 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+
         <TextView
             android:id="@+id/information_headline"
             android:layout_width="0dp"
@@ -59,9 +60,12 @@
         </android.support.v7.widget.CardView>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <TextView
             android:id="@+id/top_news_headline"
 =======
+=======
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
         <Button
             android:id="@+id/btnVideo"
             android:layout_width="0dp"

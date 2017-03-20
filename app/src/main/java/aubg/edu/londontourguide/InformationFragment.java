@@ -2,7 +2,11 @@ package aubg.edu.londontourguide;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.database.Cursor;
+=======
+import android.content.Intent;
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
 =======
 import android.content.Intent;
 >>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
@@ -10,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -25,6 +30,13 @@ import java.util.ArrayList;
 
 import aubg.edu.londontourguide.adapters.NewsAdapter;
 import aubg.edu.londontourguide.data.NewsContract;
+=======
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
 =======
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -51,6 +63,7 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
     private static final int INDEX_NEWS_TITLE = 1;
     private static final int INDEX_NEWS_URL = 2;
 
+<<<<<<< HEAD
     private Uri mUri = NewsContract.NewsEntry.CONTENT_URI;
 
 <<<<<<< HEAD
@@ -58,6 +71,9 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
     private NewsAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+=======
+Button btnVideo;
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
 =======
 Button btnVideo;
 >>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
@@ -90,6 +106,7 @@ Button btnVideo;
     }
 
     @Override
+<<<<<<< HEAD
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         getLoaderManager().initLoader(INFORMATION_LOADER, null, this);
         super.onActivityCreated(savedInstanceState);
@@ -123,6 +140,8 @@ Button btnVideo;
     public void onLoaderReset(Loader<Cursor> loader) {
         mAdapter.deleteAllData();
 =======
+=======
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -136,6 +155,9 @@ Button btnVideo;
 
             }
         });
+<<<<<<< HEAD
+>>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
+=======
 >>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
     }
 }

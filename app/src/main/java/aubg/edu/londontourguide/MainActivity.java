@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // SUGGESTION -> MAKE MUSIC PLAY AND PAUSE HERE
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
@@ -130,13 +131,6 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, GoogleMapsActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_videos) {
-            // Create a new Fragment to be placed in the activity layout
-
-
-            // Add the fragment to the 'fragment_container' FrameLayout
-
-
         } else if (id == R.id.nav_history) {
             // Create a new Fragment to be placed in the activity layout
             currentFragmet = new HistoryFragment();
@@ -158,8 +152,9 @@ public class MainActivity extends AppCompatActivity
 
             // Add the fragment to the 'fragment_container' FrameLayout
 
-        } else if (id == R.id.nav_gallery)
-        {}
+        } else if (id == R.id.nav_gallery) {
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

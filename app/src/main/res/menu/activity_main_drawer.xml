@@ -15,10 +15,6 @@
             android:icon="@drawable/ic_near_me_black_24dp"
             android:title="@string/nav_menu_map_option" />
         <item
-            android:id="@+id/nav_videos"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Videos" />
-        <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_local_library_black_24dp"
             android:title="History" />

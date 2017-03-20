@@ -2,22 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="aubg.edu.londontourguide">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <uses-permission android:name="android.permission.INTERNET" />
-=======
-=======
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<<<<<<< HEAD
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
-=======
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
 
     <application
         android:allowBackup="true"
@@ -37,8 +29,6 @@
             </intent-filter>
         </activity>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <provider
             android:name=".data.NewsProvider"
             android:authorities="edu.aubg.londontourguide.newsprovider"
@@ -52,9 +42,6 @@
                 <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
             </intent-filter>
         </service>
-=======
-=======
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -70,10 +57,6 @@
         <activity
             android:name=".GoogleMapsActivity"
             android:label="@string/title_activity_google_maps"></activity>
-<<<<<<< HEAD
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
-=======
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
     </application>
 
 </manifest>

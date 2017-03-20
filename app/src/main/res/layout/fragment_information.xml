@@ -24,7 +24,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
         <TextView
             android:id="@+id/information_headline"
             android:layout_width="0dp"
@@ -56,29 +55,10 @@
                 android:textSize="18sp" />
 
 
-
         </android.support.v7.widget.CardView>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <TextView
             android:id="@+id/top_news_headline"
-=======
-=======
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
-        <Button
-            android:id="@+id/btnVideo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Play a video"
-            android:layout_marginLeft="124dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/london_main_image"
-            />
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardView2"
->>>>>>> 8dc89d73508f7752debf892308e71ddeaf3cf412
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -87,11 +67,11 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/brief_overview_cardview" />
 
+
         <LinearLayout
             android:id="@+id/news_list"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -100,7 +80,8 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/news_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
 
@@ -113,6 +94,15 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/news_list" />
+
+        <Button
+            android:id="@+id/btnVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="124dp"
+            android:text="Play a video"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_news_source" />
 
 
     </android.support.constraint.ConstraintLayout>

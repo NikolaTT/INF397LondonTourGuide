@@ -22,5 +22,8 @@
         Across the Thames River, the London Eye observation wheel provides panoramic
         views of the South Bank cultural complex, and the entire city.
     </string>
+    <string name="brief_overview">Brief overview:</string>
+    <string name="top_10_news_today">Top 10 News Today</string>
+    <string name="news_source">(news taken from http://reddit.com/r/london)</string>
 
 </resources>

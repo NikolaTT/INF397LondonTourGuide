@@ -1,6 +1,11 @@
 *.iml
 .gradle
+.gradle/
+.gradle/*
+/.gradle/*
+
 /local.properties
+local.properties
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store

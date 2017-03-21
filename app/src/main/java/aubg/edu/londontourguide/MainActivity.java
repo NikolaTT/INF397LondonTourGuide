@@ -1,6 +1,7 @@
 package aubg.edu.londontourguide;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,7 +29,8 @@ import aubg.edu.londontourguide.backgroundtasks.NewsJobService;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Fragment currentFragmet;
+    Fragment currentFragment;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +39,21 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.london_hymn);
+        mediaPlayer.setLooping(true);
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // SUGGESTION -> MAKE MUSIC PLAY AND PAUSE HERE
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                if(mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                }
+                else {
+                    mediaPlayer.start();
+                }
             }
         });
 
@@ -69,15 +79,15 @@ public class MainActivity extends AppCompatActivity
             }
 
             // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new InformationFragment();
+            currentFragment = new InformationFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
-            currentFragmet.setArguments(getIntent().getExtras());
+            currentFragment.setArguments(getIntent().getExtras());
 
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, currentFragmet).commit();
+                    .add(R.id.fragment_container, currentFragment).commit();
         }
 
         // Create a new dispatcher using the Google Play driver.
@@ -110,6 +120,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -137,51 +153,52 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_information) {
-            // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new InformationFragment();
+        switch (id) {
+            case R.id.nav_information:
+                // Create a new Fragment to be placed in the activity layout
+                currentFragment = new InformationFragment();
 
-            // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, currentFragmet).commit();
+                // Add the fragment to the 'fragment_container' FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, currentFragment).commit();
 
-        } else if ( id== R.id.nav_news) {
-            // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new NewsFragment();
+                break;
+            case R.id.nav_news:
+                // Create a new Fragment to be placed in the activity layout
+                currentFragment = new NewsFragment();
 
-            // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, currentFragmet).commit();
+                // Add the fragment to the 'fragment_container' FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, currentFragment).commit();
 
-        }
-        else if (id == R.id.nav_map) {
-            // Create a new Fragment to be placed in the activity layout
-            Intent intent = new Intent(this, GoogleMapsActivity.class);
-            startActivity(intent);
+                break;
+            case R.id.nav_map:
+                // Create a new Fragment to be placed in the activity layout
+                Intent intent = new Intent(this, GoogleMapsActivity.class);
+                startActivity(intent);
 
-        } else if (id == R.id.nav_history) {
-            // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new HistoryFragment();
+                break;
+            case R.id.nav_history:
+                // Create a new Fragment to be placed in the activity layout
+                currentFragment = new HistoryFragment();
 
-            // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, currentFragmet).commit();
+                // Add the fragment to the 'fragment_container' FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, currentFragment).commit();
 
-        } else if ( id == R.id.nav_fun_facts){
-            // Create a new Fragment to be placed in the activity layout
-            currentFragmet = new FunFactsFragment();
+                break;
+            case R.id.nav_fun_facts:
+                // Create a new Fragment to be placed in the activity layout
+                currentFragment = new FunFactsFragment();
 
-            // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, currentFragmet).commit();
+                // Add the fragment to the 'fragment_container' FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, currentFragment).commit();
 
-        } else if (id == R.id.nav_manage) {
-            // Create a new Fragment to be placed in the activity layout
+                break;
+            case R.id.nav_gallery:
 
-            // Add the fragment to the 'fragment_container' FrameLayout
-
-        } else if (id == R.id.nav_gallery) {
-
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

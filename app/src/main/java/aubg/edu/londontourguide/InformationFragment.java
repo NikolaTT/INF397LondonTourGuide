@@ -1,8 +1,8 @@
 package aubg.edu.londontourguide;
 
 
-import android.database.Cursor;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,26 +12,15 @@ import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-
-import java.util.ArrayList;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import aubg.edu.londontourguide.adapters.NewsAdapter;
 import aubg.edu.londontourguide.data.NewsContract;
-
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 
 /**
@@ -47,17 +36,14 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
             NewsContract.NewsEntry.COLUMN_URL
     };
 
-    private static final int INDEX_NEWS_ID = 0;
-    private static final int INDEX_NEWS_TITLE = 1;
-    private static final int INDEX_NEWS_URL = 2;
-
     private Uri mUri = NewsContract.NewsEntry.CONTENT_URI;
 
     private RecyclerView mRecyclerView;
     private NewsAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    Button btnVideo;
+    private Button btnVideo;
+    private ImageView londonMainImage;
 
     public InformationFragment() {
         // Required empty public constructor
@@ -80,6 +66,15 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setHasFixedSize(true);
 
+        /*
+        set focusable to false, because otherwise
+        the RecyclerView thats focus and the app
+        starts centered on it, with the image, button,
+        and description on top being cut-out (and the
+        user would not know he/she can scroll to them).
+        */
+        mRecyclerView.setFocusable(false);
+
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -87,7 +82,9 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
         mRecyclerView.setAdapter(mAdapter);
 
         btnVideo = (Button) view.findViewById(R.id.btnVideo);
-        btnVideo.setOnClickListener(new View.OnClickListener() {
+        londonMainImage = (ImageView) view.findViewById(R.id.london_main_image);
+
+        View.OnClickListener videoClickListener = new View.OnClickListener() {
 
             public void onClick(View v) {
 
@@ -95,8 +92,10 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
                 Log.i("Video", "Video Playing....");
 
             }
-        });
+        };
 
+        btnVideo.setOnClickListener(videoClickListener);
+        londonMainImage.setOnClickListener(videoClickListener);
     }
 
     @Override
@@ -130,6 +129,6 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-        mAdapter.deleteAllData();
+//        mAdapter.deleteAllData();
     }
 }

@@ -125,19 +125,25 @@ public class NewsJobService extends SimpleJobService {
             JSONObject newsData = newsJSON.getJSONObject(NEWS_DATA);
             JSONArray newsChildren = newsData.getJSONArray(NEWS_CHILDREN);
 
-            int size = newsChildren.length() > 10 ? 10 : newsChildren.length();
+            int index = 0;
 
-            Vector<ContentValues> cVVector = new Vector<ContentValues>(size);
+            Vector<ContentValues> cVVector = new Vector<ContentValues>(index);
 
-            for(int i = 0; i < size; i++) {
+            while(index < newsChildren.length() && cVVector.size() < 10) {
 
                 String title;
                 String url;
 
-                JSONObject newsChildData = newsChildren.getJSONObject(i).getJSONObject(NEWS_CHILD_DATA);
+                JSONObject newsChildData = newsChildren.getJSONObject(index).getJSONObject(NEWS_CHILD_DATA);
+                index++;
 
                 title = newsChildData.getString(NEWS_CHILD_DATA_TITLE);
                 url = newsChildData.getString(NEWS_CHILD_DATA_URL);
+
+                if(url.contains("reddit.com") || url.contains("imgur") || url.contains("redd.it")){
+                    continue;
+                }
+
 
                 ContentValues newsValues = new ContentValues();
 

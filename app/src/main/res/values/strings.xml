@@ -49,4 +49,9 @@
     <string name="source2"></string>
     <string name="source3"></string>
     <string name="title_activity_google_maps">Map</string>
+    <string name="video_button_description">Watch a short video about London</string>
+    <string name="nav_menu_news">News</string>
+    <string name="nav_menu_history">History</string>
+    <string name="nav_menu_fun_facts">Fun Facts</string>
+    <string name="nav_menu_gallery">Gallery</string>
 </resources>

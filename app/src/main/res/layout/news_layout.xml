@@ -4,7 +4,7 @@
     android:id="@+id/news_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    app:cardUseCompatPadding="true"
     app:contentPadding="8dp">
 
     <LinearLayout
@@ -14,11 +14,14 @@
 
         <TextView
             android:id="@+id/news_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/news_url"
+            android:textSize="12sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

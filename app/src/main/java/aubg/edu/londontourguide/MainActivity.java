@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.nav_map:
-                // Create a new Fragment to be placed in the activity layout
+                // Starting a Google Maps activity
                 Intent intent = new Intent(this, GoogleMapsActivity.class);
                 startActivity(intent);
 

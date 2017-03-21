@@ -49,7 +49,7 @@ public class NewsFragment extends Fragment implements LoaderManager.LoaderCallba
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.news_news_recycler_view);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.news_recycler_view);
 
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setHasFixedSize(true);

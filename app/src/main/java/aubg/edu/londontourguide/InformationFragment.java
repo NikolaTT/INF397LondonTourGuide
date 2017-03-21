@@ -26,21 +26,7 @@ import aubg.edu.londontourguide.data.NewsContract;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class InformationFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
-
-    private static final int INFORMATION_LOADER = 0;
-
-    private static final String[] NEWS_COLUMNS = new String[]{
-            NewsContract.NewsEntry._ID,
-            NewsContract.NewsEntry.COLUMN_TITLE,
-            NewsContract.NewsEntry.COLUMN_URL
-    };
-
-    private Uri mUri = NewsContract.NewsEntry.CONTENT_URI;
-
-    private RecyclerView mRecyclerView;
-    private NewsAdapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
+public class InformationFragment extends Fragment{
 
     private Button btnVideo;
     private ImageView londonMainImage;
@@ -61,25 +47,6 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.news_recycler_view);
-
-        mRecyclerView.setNestedScrollingEnabled(false);
-        mRecyclerView.setHasFixedSize(true);
-
-        /*
-        set focusable to false, because otherwise
-        the RecyclerView thats focus and the app
-        starts centered on it, with the image, button,
-        and description on top being cut-out (and the
-        user would not know he/she can scroll to them).
-        */
-        mRecyclerView.setFocusable(false);
-
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-        mAdapter = new NewsAdapter(getActivity());
-        mRecyclerView.setAdapter(mAdapter);
 
         btnVideo = (Button) view.findViewById(R.id.btnVideo);
         londonMainImage = (ImageView) view.findViewById(R.id.london_main_image);
@@ -98,37 +65,4 @@ public class InformationFragment extends Fragment implements LoaderManager.Loade
         londonMainImage.setOnClickListener(videoClickListener);
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        getLoaderManager().initLoader(INFORMATION_LOADER, null, this);
-        super.onActivityCreated(savedInstanceState);
-    }
-
-    @Override
-    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        if (null != mUri) {
-            // Now create and return a CursorLoader that will take care of
-            // creating a Cursor for the data being displayed.
-            return new CursorLoader(
-                    getActivity(),
-                    mUri,
-                    NEWS_COLUMNS,
-                    null,
-                    null,
-                    null
-            );
-        }
-        return null;
-    }
-
-    @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        mAdapter.deleteAllData();
-        mAdapter.addFromCursor(data);
-    }
-
-    @Override
-    public void onLoaderReset(Loader<Cursor> loader) {
-//        mAdapter.deleteAllData();
-    }
 }

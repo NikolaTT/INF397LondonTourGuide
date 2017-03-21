@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity
     Fragment currentFragment;
     MediaPlayer mediaPlayer;
 
+    boolean wasPlaying = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,7 +124,22 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         super.onPause();
-        mediaPlayer.pause();
+
+        if(mediaPlayer.isPlaying()){
+            wasPlaying = true;
+            mediaPlayer.pause();
+        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(wasPlaying) {
+            wasPlaying = false;
+            mediaPlayer.start();
+        }
     }
 
     @Override

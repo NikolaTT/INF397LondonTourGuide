@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // SUGGESTION -> MAKE MUSIC PLAY AND PAUSE HERE
                 if(mediaPlayer.isPlaying()){
                     mediaPlayer.pause();
                 }
@@ -192,7 +191,7 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.nav_map:
-                // Create a new Fragment to be placed in the activity layout
+                // Starting a Google Maps activity
                 Intent intent = new Intent(this, GoogleMapsActivity.class);
                 startActivity(intent);
 
@@ -216,7 +215,12 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.nav_gallery:
+                // Create a new Fragment to be placed in the activity layout
+                currentFragment = new GalleryFragment();
 
+                // Add the fragment to the 'fragment_container' FrameLayout
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, currentFragment).commit();
                 break;
         }
 

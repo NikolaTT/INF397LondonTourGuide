@@ -54,4 +54,8 @@
     <string name="nav_menu_history">History</string>
     <string name="nav_menu_fun_facts">Fun Facts</string>
     <string name="nav_menu_gallery">Gallery</string>
+    <string name="sourcelink1">https://friendlylocalguides.com/blog/25-fun-facts-about-london</string>
+    <string name="sourcelink2">https://www.bloomsbury-international.com/blog/2014/10/03/15-interesting-facts-about-london-and-england-that-youve-never-heard/</string>
+    <string name="sourcelink3">https://www.buzzfeed.com/patricksmith/54-amazing-facts-about-london-that-will-blow-your-mind</string>
+    <string name="sources">Sources:</string>
 </resources>

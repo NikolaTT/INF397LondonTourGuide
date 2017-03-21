@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sources:"
+                android:text="@string/sources"
                 android:textSize="12sp" />
 
             <TextView
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:maxLines="1"
-                android:text="https://friendlylocalguides.com/blog/25-fun-facts-about-london"
+                android:text="@string/sourcelink1"
                 android:textColorLink="@android:color/darker_gray"
                 android:textSize="10sp" />
 
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:maxLines="1"
-                android:text="https://www.bloomsbury-international.com/blog/2014/10/03/15-interesting-facts-about-london-and-england-that-youve-never-heard/"
+                android:text="@string/sourcelink2"
                 android:textColorLink="@android:color/darker_gray"
                 android:textSize="10sp" />
 
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:maxLines="1"
-                android:text="https://www.buzzfeed.com/patricksmith/54-amazing-facts-about-london-that-will-blow-your-mind"
+                android:text="@string/sourcelink3"
                 android:textColorLink="@android:color/darker_gray"
                 android:textSize="10sp" />
         </LinearLayout>
